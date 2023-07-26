@@ -1,0 +1,80 @@
+.display-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-wrapper {
+    @extend .display-flex;
+    flex-direction: column;
+    height: 97vh;
+}
+
+.no-booking{
+    @extend .display-flex;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 20px;
+    border: 2px solid rgb(43, 135, 240);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.coach-wrapper {
+    @extend .display-flex;
+    width: 36vh;
+}
+
+.coach-container {
+    min-height: 60vh;
+    margin: 20px;
+    padding:  20px;
+    min-width: 30vh;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 25px;
+}
+.coach-header {
+    @extend .display-flex;
+    justify-content: space-between;
+    gap:15px;
+}
+
+.grey-box {
+    display: inline-block;
+    background-color: rgb(182 182 182);
+    width: 15px;
+    height: 15px;
+    border-radius: 5px;
+    border: 1px solid rgb(218, 217, 217);
+    position: relative;
+    top:4px;
+}
+.grey-box::after {
+    content:'';
+}
+
+.blue-box {
+    @extend .grey-box;
+    background-color: rgb(43, 135, 240);
+    border: 1px solid rgb(43, 135,240);
+}
+.blue-box::after {
+    content: ''
+}
+
+.coach-body{
+    @extend .display-flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 10px 5px 10px 5px;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.seats{
+    display: flex;
+    padding: 3px;
+    font-weight: bold;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}

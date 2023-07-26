@@ -1,0 +1,43 @@
+<div class="content-wrapper" *ngIf="!isLoading">
+    <div *ngIf="bookedSeats && bookedSeats.length>0; else elseblock">
+        <h3 [ngStyle]="{'text-align': 'center' }">
+            Booked Seats
+        </h3>
+        <table [attr.border]=1>
+            <tr>
+                <th [ngStyle]="{'text-wrap':'nowrap'}">Booked Seat Number: </th>
+                <td [ngStyle]="{'width': '20%','padding': '10px','text-align': 'center'}" *ngFor="let seatNo of bookedSeats">
+                    {{seatNo}}
+                </td>
+            </tr>
+            <tr>
+                <th [ngStyle]="{'text-wrap':'nowrap'}">Total Tickets Booked: </th>
+                <td [ngStyle]="{'width': '20%','padding': '10px','text-align': 'center'}" [attr.colspan]= "bookedSeats.length" >
+                    {{ bookedSeats.length }}
+                </td>
+            </tr>
+
+        </table>
+    </div>
+
+    <div >
+        <div class="coach-container">
+            <div class="coach-header">
+                <span>Booked Seats <span class="grey-box"></span></span>
+                <span>Available Seats <span class="blue-box"></span></span>
+            </div>
+
+            <div class="coach-wrapper">
+                <div class="coach-body">
+                    <span class="seats" [ngClass]="{ 'grey-box': seat.isBooked, 'blue-box': !seat.isBooked }" *ngFor="let seat of trainCoachseats[0].seats">{{seat.number}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #elseblock>
+    <div class="no-booking">
+        No Seats Booked By You.
+    </div>
+</ng-template>
