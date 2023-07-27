@@ -6,12 +6,12 @@ import { Observable, of } from "rxjs";
     providedIn: 'root'
 })
 export class TrainSeatRepository {
-    private url = "http://localhost:3000/api/train";
+    private url = "https://ttbookingbe.netlify.app/api/train";
     constructor(private _httpService: HttpClient){}
 
     // This will fetch the train seats detail.
     fetchSeatsDetail(): Observable<any> {
-        return this._httpService.get(`${this.url}/seats/details`);
+        return this._httpService.get(`${this.url}/seats/detail`);
     }
 
     // This will send req to book the tickets.
