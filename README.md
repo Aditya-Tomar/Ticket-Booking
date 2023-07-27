@@ -1,10 +1,24 @@
 # TicketBooking
 
+This Repository contain front-end angular code.
+
+# Limitation
+
+Please remember there is a limitation in redirection in this deployed application.
+Trying to move to a different page via browser URL will show you page not found dialog box.
+
+Tip - Use application interface to route to different pages.
+
+# Application Link
+
+You can visit the application through this link https://ttbooking.netlify.app/ticket-booking
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.3.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `ng serve` or `npm run start` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
