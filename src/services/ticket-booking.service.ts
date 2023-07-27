@@ -10,9 +10,8 @@ export class TicketBookingService {
 
     constructor(private _seatsDetailService: SeatsDetailService, private _trainSeatRepository: TrainSeatRepository){}
 
-    bookTicket({ name, noOfTickets }: { name: string, noOfTickets: number }): Observable<number[]> {
-        console.log(name, noOfTickets);
-        return this._trainSeatRepository.bookTicket(name, noOfTickets).pipe(
+    bookTicket({ noOfTickets }: { noOfTickets: number }): Observable<number[]> {
+        return this._trainSeatRepository.bookTicket(noOfTickets).pipe(
             tap(data => {
                 this._seatsDetailService.bookedSeat = data;
             }));

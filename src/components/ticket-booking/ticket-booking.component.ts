@@ -11,17 +11,12 @@ import { TicketBookingService } from 'src/services/ticket-booking.service';
 export class TicketBookingComponent {
 
   form: FormGroup = this._fb.group({
-    name: ['', Validators.required],
     noOfTickets: [null, [Validators.required, Validators.max(7)]]
   });
   isLoading:boolean = false;
 
   constructor( private _fb: FormBuilder, private _ticketBookingService: TicketBookingService, private _router: Router) {}
-
-  get namefield (): FormControl {
-    return this.form.get('name') as FormControl;
-  }
-
+//return input ticket field control
   get ticketfield (): FormControl {
     return this.form.get('noOfTickets') as FormControl;
   }

@@ -15,8 +15,8 @@ export class TrainSeatRepository {
     }
 
     // This will send req to book the tickets.
-    bookTicket(name: string, noOfTickets: number): Observable<any> {
-        const data = { name, noOfTickets };
+    bookTicket( noOfTickets: number): Observable<any> {
+        const data = { noOfTickets };
         return this._httpService.post(`${this.url}/ticket/booking`, data );
     }
 }

@@ -2,7 +2,6 @@
     <div class="form-box-wrapper">
         <div class="form-box-container">
             <form [formGroup]="form" class="form-container">
-                <input id="name" type="text" placeholder="Enter Name" formControlName="name">
                 <input id="ticket" 
                     type="text" 
                     (keydown)="isNumber($event)"
@@ -10,7 +9,6 @@
                     formControlName="noOfTickets"
                 > 
                 <div>
-                    <span *ngIf="namefield.status == 'INVALID' && namefield.touched">Please enter name.</span>
                     <span *ngIf="( ticketfield.status == 'INVALID' && ticketfield.touched ) || ticketfield?.errors?.['max']">Please enter number of tickets in range 1 - 7.</span>
                 </div>
                 <button class="submit-button" [ngClass]="{ 'disabled': form.valid }"(click)="bookTickets()">Book Tickets</button>
