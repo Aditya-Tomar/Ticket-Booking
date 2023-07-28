@@ -2,13 +2,6 @@
 
 This Repository contain front-end angular code.
 
-# Limitation
-
-Please remember there is a limitation in redirection in this deployed application.
-Trying to move to a different page via browser URL will show you page not found dialog box.
-
-Tip - Use application interface to route to different pages.
-
 # Application Link
 
 You can visit the application through this link https://ttbooking.netlify.app/ticket-booking
